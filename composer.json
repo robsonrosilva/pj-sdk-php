@@ -1,5 +1,5 @@
 {
-    "name": "robsonrosilva/sdk",
+    "name": "robsonrosilva/pj-sdk-php",
     "description": "SDK PHP",
     "autoload": {
         "psr-4": {
