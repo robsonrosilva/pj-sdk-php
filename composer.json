@@ -1,5 +1,5 @@
 {
-    "name": "inter/sdk",
+    "name": "robsonrosilva/sdk",
     "description": "SDK PHP",
     "autoload": {
         "psr-4": {
