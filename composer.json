@@ -15,7 +15,6 @@
     "require": {
         "guzzlehttp/guzzle": "^7.9",
         "ext-openssl": "*",
-        "monolog/monolog": "^3.8",
-        "ext-decimal": "*"
+        "monolog/monolog": "^3.8"
     }
 }
