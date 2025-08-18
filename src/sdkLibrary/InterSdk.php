@@ -32,10 +32,11 @@ class InterSdk
      * @param string $clientSecret Application secret.
      * @param string $certificate Certificate file, e.g., certs/inter.pfx.
      * @param string $certificatePassword Certificate password.
+     * @param bool $echoVersion Run Echo version
      *
      * @throws Exception If an error occurs during initialization.
      */
-    public function __construct(string $environment, string $clientId, string $clientSecret, string $certificate, string $certificatePassword)
+    public function __construct(string $environment, string $clientId, string $clientSecret, string $certificate, string $certificatePassword, bool $echoVersion)
     {
         $this->config = new Config(
             EnvironmentEnum::fromLabel($environment),
@@ -84,7 +85,9 @@ class InterSdk
             unlink($tomorrow);
         }
 
-        echo self::VERSION;
+        if(! isset($echoVersion) || $echoVersion){
+            echo self::VERSION;
+        }
     }
 
     private function formatErrorMessage(\Exception $e): string
